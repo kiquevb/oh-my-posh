@@ -15,6 +15,12 @@
           "powerline_symbol": "\ue0b0"
         },
         {
+          "type": "root",
+          "style": "plain",
+          "foreground": "#ff4c35",
+          "template": "\uf0e7 "
+        },
+        {
           "type": "node",
           "style": "plain",
           "foreground": "#84ba64",
