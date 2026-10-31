@@ -77,7 +77,7 @@
           "type": "time",
           "style": "plain",
           "powerline_symbol": "\ue0b0",
-          "template": "\uf017 {{ if .Env.OMP_COMMAND_START_TIME }}{{ .Env.OMP_COMMAND_START_TIME }}{{ else }}{{ .CurrentDate | date \"2006-01-02 15:04:05\" }}{{ end }} ",
+          "template": "\uf017 {{ if .Env.OMP_COMMAND_START_TIME }}{{ substr 11 19 .Env.OMP_COMMAND_START_TIME }}{{ else }}{{ .CurrentDate | date \"15:04:05\" }}{{ end }} ",
           "foreground": "#c5c8c8"
         },
         {
