@@ -119,9 +119,10 @@
           "type": "git",
           "style": "plain",
           "foreground": "#C898FD",
-          "template": "{{ .HEAD }}{{ if .Upstream }} ⇢ {{ .Upstream }}{{ end }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and .Staging.Changed .Working.Changed }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (not .Staging.Changed) (not .Working.Changed) }} ✓ clean{{ end }}",
+          "template": "\uf09b</> {{ .HEAD }}{{ if .Upstream }} ⇢ {{ .Upstream }}{{ end }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and .Staging.Changed .Working.Changed }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (not .Staging.Changed) (not .Working.Changed) }} ✓ clean{{ end }}",
           "options": {
             "fetch_status": true,
+            "branch_icon": "",
             "mapped_branches": {
               "feat/*": "\ueb44 ",
               "bug/*": "\ueaaf "
