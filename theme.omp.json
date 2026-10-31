@@ -8,13 +8,6 @@
       "trailing_diamond": "d",
       "segments": [
         {
-          "type": "git",
-          "style": "plain",
-          "foreground": "#C898FD",
-          "template": "\uf09b</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}",
-          "options": {}
-        },
-        {
           "type": "react",
           "style": "plain",
           "powerline_symbol": "\ue0b0",
@@ -123,6 +116,13 @@
           "options": {
             "style": "folder"
           }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#C898FD",
+          "template": "\uf09b</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}",
+          "options": {}
         }
       ]
     },
