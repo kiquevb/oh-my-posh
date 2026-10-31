@@ -105,6 +105,15 @@
           "powerline_symbol": "\ue0b0",
           "template": "\uf252 {{ .FormattedMs }} ",
           "foreground": "#c5c8c8"
+        },
+        {
+          "type": "status",
+          "style": "plain",
+          "foreground": "#c5c8c8",
+          "template": "{{ if .Executed }} {{ if eq .Code 0 }}\uf00c success{{ else }}\uf071 failed ({{ .Code }}){{ end }} {{ end }}",
+          "options": {
+            "always_enabled": true
+          }
         }
       ]
     },
