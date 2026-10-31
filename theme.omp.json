@@ -8,36 +8,6 @@
       "newline": true,
       "segments": [
         {
-          "type": "text",
-          "style": "plain",
-          "foreground": "#FBF8EF",
-          "template": "\uedc5 kiquevb ",
-          "powerline_symbol": "\ue0b0"
-        },
-        {
-          "type": "project",
-          "style": "plain",
-          "foreground": "#61e4ff",
-          "template": "\uf07b {{ if .Name }}{{ .Name }}{{ if .Version }} {{ .Version }}{{ end }}{{ else }}{{ .Folder }}{{ end }} ",
-          "options": {
-            "always_enabled": true
-          }
-        },
-        {
-          "type": "git",
-          "style": "plain",
-          "foreground": "#C898FD",
-          "template": "\uf09b</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}",
-          "options": {}
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "left",
-      "newline": true,
-      "segments": [
-        {
           "type": "react",
           "style": "plain",
           "powerline_symbol": "\ue0b0",
@@ -116,6 +86,36 @@
           "powerline_symbol": "\ue0b0",
           "template": " \uf252 {{ .FormattedMs }} ",
           "foreground": "#c5c8c8"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#FBF8EF",
+          "template": "\uedc5 kiquevb ",
+          "powerline_symbol": "\ue0b0"
+        },
+        {
+          "type": "project",
+          "style": "plain",
+          "foreground": "#61e4ff",
+          "template": "\uf07b {{ if .Name }}{{ .Name }}{{ if .Version }} {{ .Version }}{{ end }}{{ else }}{{ .Folder }}{{ end }} ",
+          "options": {
+            "always_enabled": true
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#C898FD",
+          "template": "\uf09b</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}",
+          "options": {}
         }
       ]
     },
