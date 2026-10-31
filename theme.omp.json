@@ -120,7 +120,7 @@
           "foreground_templates": [
             "{{ if eq .Code 0 }}#84ba64{{ else }}#ff4c35{{ end }}"
           ],
-          "template": "{{ if .Executed }}{{ if eq .Code 0 }}\uf00c{{ else }}\uf071{{ .Code }}{{ end }} {{ end }}",
+          "template": "{{ if .Executed }}{{ if eq .Code 0 }}\uf00c{{ else }}\uf071 {{ .Code }}{{ end }} {{ end }}",
           "options": {
             "always_enabled": true
           }
@@ -145,9 +145,10 @@
           "type": "git",
           "style": "plain",
           "foreground": "#C898FD",
-          "template": "\uf09b</> {{ .HEAD }}{{ if .Upstream }} ⇢ {{ .Upstream }}{{ end }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and .Staging.Changed .Working.Changed }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}",
+          "template": "\uf09b</>{{ if .Upstream }} ⇢ {{ $remoteBranch := replaceP \"^[^/]+/\" .Upstream \"\" }}{{ url .Upstream (printf \"%s/tree/%s\" (trimSuffix \"/\" .UpstreamURL) $remoteBranch) }}{{ end }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and .Staging.Changed .Working.Changed }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}",
           "options": {
             "fetch_status": true,
+            "fetch_upstream_icon": true,
             "branch_icon": "",
             "mapped_branches": {
               "feat/*": "\uec10 ",
