@@ -150,6 +150,7 @@
             "fetch_status": true,
             "fetch_upstream_icon": true,
             "branch_icon": "",
+            "branch_identical_icon": "",
             "mapped_branches": {
               "feat/*": "\uec10 ",
               "bug/*": "\ueaaf "
