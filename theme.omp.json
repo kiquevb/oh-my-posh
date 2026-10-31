@@ -96,7 +96,7 @@
           "type": "time",
           "style": "plain",
           "powerline_symbol": "\ue0b0",
-          "template": "\uf017 {{ if .Env.OMP_COMMAND_START_TIME }}{{ substr 11 19 .Env.OMP_COMMAND_START_TIME }}{{ else }}{{ .CurrentDate | date \"15:04:05\" }}{{ end }} ",
+          "template": " \uf017 {{ if .Env.OMP_COMMAND_START_TIME }}{{ substr 11 19 .Env.OMP_COMMAND_START_TIME }}{{ else }}{{ .CurrentDate | date \"15:04:05\" }}{{ end }} ",
           "foreground": "#c5c8c8"
         },
         {
@@ -104,13 +104,16 @@
           "style": "plain",
           "powerline_symbol": "\ue0b0",
           "template": "\uf252 {{ .FormattedMs }} ",
-          "foreground": "#c5c8c8"
+          "foreground": "#d56cb4"
         },
         {
           "type": "status",
           "style": "plain",
           "foreground": "#c5c8c8",
-          "template": "{{ if .Executed }} {{ if eq .Code 0 }}\uf00c success{{ else }}\uf071 failed ({{ .Code }}){{ end }} {{ end }}",
+          "foreground_templates": [
+            "{{ if eq .Code 0 }}#84ba64{{ else }}#ff4c35{{ end }}"
+          ],
+          "template": "{{ if .Executed }} {{ if eq .Code 0 }}\uf00c{{ else }}\uf071 {{ .Code }}{{ end }} {{ end }}",
           "options": {
             "always_enabled": true
           }
