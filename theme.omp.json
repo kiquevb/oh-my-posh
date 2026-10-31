@@ -24,14 +24,26 @@
           "type": "npm",
           "style": "plain",
           "foreground": "#cb3837",
-          "template": "\uf487 {{.Full}} "
+          "template": "\uf487 {{.Full}} ",
+          "options": {
+            "display_mode": "files",
+            "extensions": [
+              "package-lock.json"
+            ]
+          }
         },
         {
           "type": "pnpm",
           "style": "plain",
           "foreground": "#f69220",
           "template": "\ueb29 {{ .Full }} ",
-          "powerline_symbol": "\ue0b0"
+          "powerline_symbol": "\ue0b0",
+          "options": {
+            "display_mode": "files",
+            "extensions": [
+              "pnpm-lock.yaml"
+            ]
+          }
         },
         {
           "type": "python",
