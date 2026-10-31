@@ -169,12 +169,5 @@
         }
       ]
     }
-  ],
-  "palette": {
-    "text": "#FBF8EF",
-    "primary": "#78B3CE",
-    "secondary": "#D62828",
-    "tertiary": "#F77F00",
-    "accent": "#F4AE52"
-  }
+  ]
 }
