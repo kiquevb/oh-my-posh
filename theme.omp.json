@@ -11,33 +11,33 @@
           "type": "react",
           "style": "plain",
           "powerline_symbol": "\ue0b0",
-          "template": " \ue7ba {{ .Full }} ",
+          "template": "\ue7ba {{ .Full }} ",
           "foreground": "#61dafb"
         },
         {
           "type": "node",
           "style": "plain",
           "foreground": "#84ba64",
-          "template": " \ued0d {{ .Full }} "
+          "template": "\ued0d {{ .Full }} "
         },
         {
           "type": "npm",
           "style": "plain",
           "foreground": "#cb3837",
-          "template": " \uf487 {{.Full}} "
+          "template": "\uf487 {{.Full}} "
         },
         {
           "type": "pnpm",
           "style": "plain",
           "foreground": "#f69220",
-          "template": " \ueb29 {{ .Full }} ",
+          "template": "\ueb29 {{ .Full }} ",
           "powerline_symbol": "\ue0b0"
         },
         {
           "type": "python",
           "style": "plain",
           "powerline_symbol": "\ue0b0",
-          "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
+          "template": "\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
           "cache": {
             "duration": "168h",
             "strategy": "folder"
@@ -48,7 +48,7 @@
           "type": "terraform",
           "style": "plain",
           "powerline_symbol": "\ue0b0",
-          "template": " \ue8bd {{ .WorkspaceName }} ",
+          "template": "\ue8bd {{ .WorkspaceName }} ",
           "cache": {
             "duration": "5m",
             "strategy": "folder"
@@ -59,14 +59,14 @@
           "type": "azd",
           "style": "plain",
           "powerline_symbol": "\ue0b0",
-          "template": " \uebd8 {{ .DefaultEnvironment }} ",
+          "template": "\uebd8 {{ .DefaultEnvironment }} ",
           "foreground": "#0089d6"
         },
         {
           "type": "aws",
           "style": "plain",
           "powerline_symbol": "\ue0b0",
-          "template": " \ue7ad {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} ",
+          "template": "\ue7ad {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} ",
           "cache": {
             "duration": "1h",
             "strategy": "session"
@@ -77,14 +77,14 @@
           "type": "time",
           "style": "plain",
           "powerline_symbol": "\ue0b0",
-          "template": " \uf017 {{ if .Env.OMP_COMMAND_START_TIME }}{{ .Env.OMP_COMMAND_START_TIME }}{{ else }}{{ .CurrentDate | date \"2006-01-02 15:04:05\" }}{{ end }} ",
+          "template": "\uf017 {{ if .Env.OMP_COMMAND_START_TIME }}{{ .Env.OMP_COMMAND_START_TIME }}{{ else }}{{ .CurrentDate | date \"2006-01-02 15:04:05\" }}{{ end }} ",
           "foreground": "#c5c8c8"
         },
         {
           "type": "executiontime",
           "style": "plain",
           "powerline_symbol": "\ue0b0",
-          "template": " \uf252 {{ .FormattedMs }} ",
+          "template": "\uf252 {{ .FormattedMs }} ",
           "foreground": "#c5c8c8"
         }
       ]
