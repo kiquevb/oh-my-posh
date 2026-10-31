@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "version": 2,
+  "version": 1,
   "blocks": [
     {
       "type": "prompt",
@@ -8,11 +8,18 @@
       "trailing_diamond": "d",
       "segments": [
         {
-          "type": "text",
+          "type": "git",
           "style": "plain",
-          "foreground": "#FBF8EF",
-          "template": "\uedc5 kiquevb ",
-          "powerline_symbol": "\ue0b0"
+          "foreground": "#C898FD",
+          "template": "\uf09b</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}",
+          "options": {}
+        },
+        {
+          "type": "react",
+          "style": "plain",
+          "powerline_symbol": "\ue0b0",
+          "template": " \ue7ba {{ .Full }} ",
+          "foreground": "#61dafb"
         },
         {
           "type": "node",
@@ -34,13 +41,6 @@
           "powerline_symbol": "\ue0b0"
         },
         {
-          "type": "react",
-          "style": "plain",
-          "powerline_symbol": "\ue0b0",
-          "template": " \ue7ba {{ .Full }} ",
-          "foreground": "#61dafb"
-        },
-        {
           "type": "python",
           "style": "plain",
           "powerline_symbol": "\ue0b0",
@@ -50,13 +50,6 @@
             "strategy": "folder"
           },
           "foreground": "#f7cb3f"
-        },
-        {
-          "type": "azd",
-          "style": "plain",
-          "powerline_symbol": "\ue0b0",
-          "template": " \uebd8 {{ .DefaultEnvironment }} ",
-          "foreground": "#0089d6"
         },
         {
           "type": "terraform",
@@ -70,6 +63,13 @@
           "foreground": "#5f43e9"
         },
         {
+          "type": "azd",
+          "style": "plain",
+          "powerline_symbol": "\ue0b0",
+          "template": " \uebd8 {{ .DefaultEnvironment }} ",
+          "foreground": "#0089d6"
+        },
+        {
           "type": "aws",
           "style": "plain",
           "powerline_symbol": "\ue0b0",
@@ -81,17 +81,17 @@
           "foreground": "#ff8e04"
         },
         {
-          "type": "wakatime",
+          "type": "time",
           "style": "plain",
           "powerline_symbol": "\ue0b0",
-          "template": " \uf017 {{ secondsRound .CumulativeTotal.Seconds }} ",
+          "template": " \uf017 {{ .CurrentDate | date .Format }} ",
           "foreground": "#c5c8c8"
         },
         {
           "type": "executiontime",
           "style": "plain",
           "powerline_symbol": "\ue0b0",
-          "template": " \ue383 {{ .FormattedMs }} ",
+          "template": " \uf252 {{ .FormattedMs }} ",
           "foreground": "#c5c8c8"
         }
       ]
@@ -101,6 +101,13 @@
       "alignment": "left",
       "newline": true,
       "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#FBF8EF",
+          "template": "\uedc5 kiquevb on ",
+          "powerline_symbol": "\ue0b0"
+        },
         {
           "type": "project",
           "style": "plain",
@@ -116,24 +123,6 @@
           "options": {
             "style": "folder"
           }
-        },
-        {
-          "type": "gitversion",
-          "style": "plain",
-          "powerline_symbol": "\ue0b0",
-          "template": " \uf412 {{ .Major }}.{{ .Minor }}.{{ .Patch }} ",
-          "cache": {
-            "duration": "2s",
-            "strategy": "session"
-          },
-          "foreground": "#C898FD"
-        },
-        {
-          "type": "git",
-          "style": "plain",
-          "foreground": "#C898FD",
-          "template": "\uf09b</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}",
-          "options": {}
         }
       ]
     },
