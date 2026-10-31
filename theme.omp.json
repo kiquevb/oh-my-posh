@@ -107,13 +107,6 @@
       "newline": true,
       "segments": [
         {
-          "type": "text",
-          "style": "plain",
-          "foreground": "#FBF8EF",
-          "template": "\uedc5 kiquevb ",
-          "powerline_symbol": "\ue0b0"
-        },
-        {
           "type": "project",
           "style": "plain",
           "foreground": "#61e4ff",
@@ -145,8 +138,15 @@
         {
           "type": "text",
           "style": "plain",
+          "foreground": "#FBF8EF",
+          "template": "\uedc5 kiquevb ",
+          "powerline_symbol": "\ue0b0"
+        },
+        {
+          "type": "text",
+          "style": "plain",
           "foreground": "#ff4c35",
-          "template": "\uf292 "
+          "template": "\uf120 "
         }
       ]
     }
