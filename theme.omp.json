@@ -8,11 +8,11 @@
       "newline": true,
       "segments": [
         {
-          "type": "react",
+          "type": "text",
           "style": "plain",
-          "powerline_symbol": "\ue0b0",
-          "template": "\ue7ba {{ .Full }} ",
-          "foreground": "#61dafb"
+          "foreground": "#FBF8EF",
+          "template": "\uedc5 kiquevb ",
+          "powerline_symbol": "\ue0b0"
         },
         {
           "type": "node",
@@ -44,6 +44,13 @@
               "pnpm-lock.yaml"
             ]
           }
+        },
+        {
+          "type": "react",
+          "style": "plain",
+          "powerline_symbol": "\ue0b0",
+          "template": "\ue7ba {{ .Full }} ",
+          "foreground": "#61dafb"
         },
         {
           "type": "python",
@@ -139,15 +146,8 @@
         {
           "type": "text",
           "style": "plain",
-          "foreground": "#FBF8EF",
-          "template": "\uedc5 kiquevb ",
-          "powerline_symbol": "\ue0b0"
-        },
-        {
-          "type": "text",
-          "style": "plain",
           "foreground": "#ff4c35",
-          "template": "\uf120 "
+          "template": "\uf120  "
         }
       ]
     }
