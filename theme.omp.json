@@ -145,7 +145,7 @@
           "type": "git",
           "style": "plain",
           "foreground": "#C898FD",
-          "template": "\uf09b</>{{ if .Upstream }} ⇢ {{ $remoteBranch := replaceP \"^[^/]+/\" .Upstream \"\" }}{{ url .Upstream (printf \"%s/tree/%s\" (trimSuffix \"/\" .UpstreamURL) $remoteBranch) }}{{ end }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and .Staging.Changed .Working.Changed }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}",
+          "template": "\uf09b</> {{ .HEAD }}{{ if .Upstream }} ⇢ {{ $remoteBranch := replaceP \"^[^/]+/\" .Upstream \"\" }}{{ url .Upstream (printf \"%s/tree/%s\" (trimSuffix \"/\" .UpstreamURL) $remoteBranch) }}{{ end }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and .Staging.Changed .Working.Changed }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}",
           "options": {
             "fetch_status": true,
             "fetch_upstream_icon": true,
