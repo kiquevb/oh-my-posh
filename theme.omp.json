@@ -131,7 +131,7 @@
             "fetch_status": true,
             "branch_icon": "",
             "mapped_branches": {
-              "feat/*": "\ueb44 ",
+              "feat/*": "\uec10 ",
               "bug/*": "\ueaaf "
             }
           }
@@ -147,7 +147,7 @@
           "type": "text",
           "style": "plain",
           "foreground": "#ff4c35",
-          "template": "\uf120  "
+          "template": "\uf120 "
         }
       ]
     }
